@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<title>landing.high5</title>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: "Roboto", sans-serif;
+			color: #212529;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+
+		.id-hero {
+			max-width: 556px;
+			margin: auto;
+			background: url(images/banner.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.idhero-header {
+			padding: 25px 0 0 0;
+		}
+
+		.idhero-header {
+			padding: 25px 0 0 0;
+			display: flex;
+			align-items: center;
+			grid-column-gap: 10px;
+			column-gap: 10px;
+		}
+
+		.idlogo img {
+			max-width: 410px;
+			display: block;
+		}
+
+		.idhero-year {
+			font-size: 30px;
+		}
+
+		.id-details {
+			padding: 24px 0px 10px 10px;
+		}
+
+		.idphoto {
+			padding: 10px;
+			border-radius: 10px;
+			background: #fff;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+			min-width: 224px;
+			;
+		}
+
+		.idphoto img {
+			border-radius: 4px;
+			width: 100%;
+			height: 100%;
+			min-height: 270px;
+			object-fit: cover;
+			display: block;
+			box-shadow: inset rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+		}
+
+		.id-details {
+			display: flex;
+			grid-column-gap: 10px;
+			column-gap: 10px;
+		}
+
+		.id-data {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border-radius: 14px 0 0 14px;
+			background: rgb(255 255 255 / 60%);
+			padding: 18px;
+			width: 100%;
+		}
+
+		.detop span:nth-child(1) {
+			color: #212529;
+			font-size: 56px;
+			line-height: 67px;
+			text-align: center;
+			display: block;
+		}
+
+		.detop span:nth-child(2) {
+			font-size: 50px;
+			line-height: 61px;
+			display: block;
+		}
+
+		.debtm span:nth-child(1) {
+			color: #212529;
+			font-size: 47px;
+			line-height: 54px;
+			text-align: center;
+			display: block;
+		}
+
+		.debtm span:nth-child(2) {
+			color: #212529;
+			font-size: 36px;
+			line-height: 42px;
+			text-align: center;
+			display: block;
+			margin: 10px 0 0 0;
+		}
+
+		.datatimer-strip span {
+			text-align: center;
+			display: block;
+			font-size: 33px;
+			font-weight: 600;
+			line-height: normal;
+			position: relative;
+			z-index: 9;
+		}
+
+		.datatimer-strip {
+			padding: 6.5px;
+			position: relative;
+		}
+
+		.datatimer-strip::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0 !important;
+			top: 0;
+			background: red;
+			animation: colorChange 6s linear infinite;
+		}
+
+		@keyframes colorChange {
+			0% {
+				width: 0%;
+				left: 0;
+			}
+
+			50% {
+				width: 100%;
+				left: 0;
+			}
+
+			100% {
+				width: 0%;
+				left: 100%;
+			}
+		}
+
+		.qrcode-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 10px;
+			column-gap: 10px;
+		}
+
+		.northbay {
+			min-height: 197px;
+			border-radius: 14px;
+			animation: qrChange 3s linear infinite;
+			background-color: #Ffffff;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.qrcode-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 10px;
+			column-gap: 10px;
+			padding: 14px 14px 28px;
+		}
+
+
+		@keyframes qrChange {
+			0% {
+				background-color: red;
+			}
+
+			/* Initial color */
+			50% {
+				background-color: #ffcccc;
+			}
+
+			/* Middle color */
+			100% {
+				background-color: red;
+			}
+
+			/* Final color */
+		}
+
+		.qrcodeid {
+			box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+		}
+
+		.idexpiry span {
+			font-size: 22px;
+			line-height: 26px;
+			display: block;
+			margin-top: 16px;
+		}
+
+		.idexpiry {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+		}
+
+		.barcode {
+			padding: 0 14px;
+		}
+
+		.barcode img {
+			max-height: 102px;
+			width: 100%;
+		}
+
+		.buttontop {
+			height: 58px;
+			background-color: #ffffff;
+			display: flex
+		}
+
+		.button {
+			
+			background-color: antiquewhite;
+			display: inline-block;
+			background-color: #1890ff;
+			margin: 0px 5px 0px 0px;
+			color: #fff;
+			padding: 24px 24px 10px 24px; 
+			height: 68px;
+			text-align: center;
+			align-items: center;
+			border-radius: 6%;
+		}
+		.qr {
+			background-color: #1890ff;
+			height: 68px;
+			padding: 23px 15px 30px 15px;
+			border-radius: 6%;
+		}
+			</style>
+
+
+</head>
+
+<body>
+
+
+	<div class="id-hero">
+		<div class="buttontop">
+			<div class="button">
+				< &nbsp; Back
+			</div>
+			<div class="qr"> 
+				<img src="images/Qr.png" alt="">
+			 </div>
+
+		</div>
+		<div class="idhero-header">
+			<div class="idlogo">
+				<img src="images/idlogo.png" alt="">
+			</div>
+			<div class="idhero-year">2023-24</div>
+		</div>
+		<div class="id-details">
+			<div class="idphoto">
+				<img src="images/anmol-photo.png" alt="">
+			</div>
+			<div class="id-data">
+				<div class="detop">
+					<span>Singh</span>
+					<span>Anmoldeep</span>
+				</div>
+				<div class="debtm">
+					<span>Student</span>
+					<span>A00156979</span>
+				</div>
+			</div>
+		</div>
+		<div class="datatimer-strip" id="content">
+			<span id="counter">Mar 26, 2024 20:42:55</span>
+		</div>
+		<div class="qrcode-grid">
+			<div class="qrcodeid">
+				<img src="images/qrcode.png" alt="">
+			</div>
+			<div class="idexpiry">
+				<span>ID Expires August 31th 2024</span>
+				<div class="northbay">
+					<img src="images/northbay.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="barcode">
+			<img src="images/barcode.svg" alt="">
+		</div>
+	</div>
+
+	<script>
+		function updateCounter() {
+			var now = new Date();
+			var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			var month = months[now.getMonth()];
+			var day = now.getDate();
+			var year = now.getFullYear();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			var timeString = month + ' ' + day + ', ' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+			document.getElementById('counter').innerText = timeString;
+		}
+
+		setInterval(updateCounter, 1000);
+
+		updateCounter();
+	</script>
+</body>
+
+</html>
